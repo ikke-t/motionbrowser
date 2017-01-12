@@ -51,6 +51,8 @@ setlocale(LC_ALL, $locales);
 include("calendar.inc");
 include("$lang");
 
+    date_default_timezone_set('Europe/Helsinki');
+
     // Taille d'un fichier
     function afftaille($fic)
     {
@@ -141,14 +143,14 @@ function validateForm(frm)
 
 	// if there are one or more events to delete ...
 	if (todelete) {
-		if (confirm("<?echo $java_confirm_delete;?>")) {
+		if (confirm("<?php echo $java_confirm_delete;?>")) {
 			frm.todelete.value = todelete;
 			return true;
 		}
 		else return false;
 	}
 	else {
-		alert("<?echo "$java_select_delete";?>");
+		alert("<?php echo $java_select_delete;?>");
 		return false;
 	}
 }
@@ -470,7 +472,8 @@ for (i = 2; i < <?php echo $row_count; ?>; i += 2) ToggleRowVisibility(i);
 if ($ratio > .9)
     echo 'alert("'.$space1.$datadisque.$low_space.' ")';
 ?>
-//-->
+//
+-->
 </script>
 
 </body>

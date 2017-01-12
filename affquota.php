@@ -1,4 +1,4 @@
-<?
+<?php
 include("config.inc");
 $ratio=strtr($_GET['ratio'],",",".");
 header("Content-type: image/png");

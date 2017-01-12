@@ -1,4 +1,4 @@
-<?
+<?php
 $err_upd_size="Error while updating file size...";
 $err_sel_size="Problem selecting database...";
 $err_req_quota="Error while selecting quotas...";
